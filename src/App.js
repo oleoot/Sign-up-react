@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 import SignUpForm from './pages/SignUpForm'
 import SignInForm from './pages/SignInForm'
 import './App.css';
@@ -12,13 +12,13 @@ class App extends Component {
           <div className="app-aside"> </div>
           <div className="app-form">
             <div className="pageSwitcher">
-              <a href="#" className="pageSwitcher-item">Sign In</a>
-              <a href="#" className="pageSwitcher-item pageSwitcher-item-active">Sign Up</a>
+              <NavLink to="/sign-in" activeClassName="pageSwitcher-item-active" className="pageSwitcher-item">Sign In</NavLink>
+              <NavLink exact to="/" activeClassName="pageSwitcher-item-active" className="pageSwitcher-item">Sign Up</NavLink>
             </div>
 
 
             <div className="form-title">
-              <Link to="/sign-in" className="form-title-link">Sign In</Link> or <Link to="/" className="form-title-link form-title-link-active">Sign Up</Link>
+              <NavLink to="/sign-in" activeClassName="form-title-link-active" className="form-title-link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="form-title-link-active" className="form-title-link">Sign Up</NavLink>
             </div>
 
             <Route exact path="/" component={SignUpForm}>

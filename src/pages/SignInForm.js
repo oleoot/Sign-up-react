@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class SignInForm extends Component {
 
@@ -20,7 +21,7 @@ class SignInForm extends Component {
 
                     <div className="form-field">
                         <button className="form-field-button mr-20">Sign In</button>
-                        <a href="#" className="form-field-link">Create an account</a>
+                        <Link to="/" className="form-field-link">Create an account</Link>
                     </div>
 
 
