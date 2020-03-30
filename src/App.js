@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <div className="app-aside"> </div>
+          <div className="app-aside"></div>
           <div className="app-form">
             <div className="pageSwitcher">
               <NavLink to="/sign-in" activeClassName="pageSwitcher-item-active" className="pageSwitcher-item">Sign In</NavLink>
